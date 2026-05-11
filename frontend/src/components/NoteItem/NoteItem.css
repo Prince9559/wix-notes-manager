@@ -54,10 +54,8 @@
     transform: scale(1.03);
 }
 
-
-/* Mobile Responsive */
-
-@media screen and (max-width:768px){
+@media screen and (max-width:768px)
+{
 
     .note-item{
         padding: 18px;

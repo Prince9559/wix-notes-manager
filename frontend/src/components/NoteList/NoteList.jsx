@@ -1,12 +1,8 @@
 import "./NoteList.css";
-
 import NoteItem from "../NoteItem/NoteItem";
 
-function NoteList({
-  notes,
-  onDelete,
-  onEdit,
-}) {
+function NoteList({notes,onDelete,onEdit,}) 
+{
 
   return (
 
@@ -14,14 +10,7 @@ function NoteList({
 
       {
         notes.map((note) => (
-
-          <NoteItem
-            key={note._id}
-            note={note}
-            onDelete={onDelete}
-            onEdit={onEdit}
-          />
-
+          <NoteItem key={note._id} note={note} onDelete={onDelete} onEdit={onEdit}/>
         ))
       }
 

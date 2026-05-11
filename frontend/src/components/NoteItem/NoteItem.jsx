@@ -1,10 +1,7 @@
 import "./NoteItem.css";
 
-function NoteItem({
-  note,
-  onDelete,
-  onEdit,
-}) {
+function NoteItem({note, onDelete, onEdit,}) 
+{
 
   return (
 
@@ -15,21 +12,8 @@ function NoteItem({
       <p>{note.description}</p>
 
       <div className="buttons">
-
-        <button
-          onClick={() => onEdit(note)}
-        >
-          Edit
-        </button>
-
-        <button
-          onClick={() =>
-            onDelete(note._id)
-          }
-        >
-          Delete
-        </button>
-
+        <button onClick={() => onEdit(note)}>Edit</button>
+        <button onClick={() => onDelete(note._id)}>Delete</button>
       </div>
 
     </div>
