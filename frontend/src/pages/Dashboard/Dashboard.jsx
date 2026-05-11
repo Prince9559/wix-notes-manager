@@ -10,8 +10,18 @@ import {
 } from "../../api/notesApi";
 
 import Navbar from "../../components/Navbar/Navbar";
+
 import NoteForm from "../../components/NoteForm/NoteForm";
+
 import NoteList from "../../components/NoteList/NoteList";
+
+import {
+  ToastContainer,
+  toast,
+} from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+
 
 function Dashboard() {
 
@@ -36,9 +46,15 @@ function Dashboard() {
   }, []);
 
 
-  const handleAddNote = async (noteData) => {
+  const handleAddNote = async (
+    noteData
+  ) => {
 
     await addNote(noteData);
+
+    toast.success(
+      "Note Added Successfully"
+    );
 
     fetchNotes();
   };
@@ -53,6 +69,10 @@ function Dashboard() {
       noteData
     );
 
+    toast.success(
+      "Note Updated Successfully"
+    );
+
     setEditingNote(null);
 
     fetchNotes();
@@ -62,6 +82,10 @@ function Dashboard() {
   const handleDeleteNote = async (id) => {
 
     await deleteNote(id);
+
+    toast.error(
+      "Note Deleted Successfully"
+    );
 
     fetchNotes();
   };
@@ -83,6 +107,11 @@ function Dashboard() {
         notes={notes}
         onDelete={handleDeleteNote}
         onEdit={setEditingNote}
+      />
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
       />
 
     </div>
