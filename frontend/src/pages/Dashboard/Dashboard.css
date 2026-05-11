@@ -1,0 +1,15 @@
+.dashboard{
+    min-height: 100vh;
+    background: #f4f7fb;
+    padding: 30px;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width:768px){
+
+    .dashboard{
+        padding: 15px;
+    }
+
+}
