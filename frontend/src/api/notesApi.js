@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_URL =
-  "https://wix-notes-manager.onrender.com/api/notes";
+  "https://wix-notes-manager-2.onrender.com/api/notes";
 
 
 export const getNotes = async () => {
@@ -14,6 +14,7 @@ export const addNote = async (noteData) => {
     noteData
   );
 };
+
 
 
 export const updateNote = async (
